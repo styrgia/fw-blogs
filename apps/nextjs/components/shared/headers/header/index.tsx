@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import ThemeToggler from './ThemeToggler';
 import menuData from './menuData';
 
-export default function Header() {
+export function Header() {
     const [navigationOpen, setNavigationOpen] = useState(false);
     const [dropdownToggler, setDropdownToggler] = useState(false);
     const [stickyMenu, setStickyMenu] = useState(false);

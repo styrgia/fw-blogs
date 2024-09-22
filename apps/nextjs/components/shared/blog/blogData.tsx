@@ -1,4 +1,4 @@
-import { Blog } from '@/components/shared/blog/blog';
+import { Blog } from '~/components/shared/blog/blog';
 
 const BlogData: Blog[] = [
     {

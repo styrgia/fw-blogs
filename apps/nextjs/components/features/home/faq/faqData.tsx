@@ -1,4 +1,4 @@
-import { FAQ } from '@/components/features/home/faq/faq';
+import { FAQ } from '~/components/features/home/faq/faq';
 
 const faqData: FAQ[] = [
     {

@@ -1,11 +1,10 @@
-import BlogData from '@/components/shared/blog/blogData';
-import BlogItem from '@/components/shared/blog/BlogItem';
+import BlogData from '~/components/shared/blog/blogData';
+import { BlogItem } from '~/components/shared/blog/item';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Blog Page - Solid SaaS Boilerplate',
     description: 'This is Blog page for Solid Pro',
-    // other metadata
 };
 
 const BlogPage = async () => {

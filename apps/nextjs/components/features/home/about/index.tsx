@@ -1,31 +1,15 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Reveal from '~/components/shared/animations/reveal';
 
-const About = () => {
+export function About() {
     return (
         <>
-            {/* <!-- ===== About Start ===== --> */}
             <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
                 <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
                     <div className="flex items-center gap-8 lg:gap-32.5">
-                        <motion.div
-                            variants={{
-                                hidden: {
-                                    opacity: 0,
-                                    x: -20,
-                                },
-
-                                visible: {
-                                    opacity: 1,
-                                    x: 0,
-                                },
-                            }}
-                            initial="hidden"
-                            whileInView="visible"
-                            transition={{ duration: 0.5, delay: 0.1 }}
-                            viewport={{ once: true }}
+                        <Reveal
+                            dir="left"
+                            duration={0.5}
                             className="animate_left relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
                         >
                             <Image src="/images/about/about-light-01.png" alt="About" className="dark:hidden" fill />
@@ -35,27 +19,10 @@ const About = () => {
                                 className="hidden dark:block"
                                 fill
                             />
-                        </motion.div>
-                        <motion.div
-                            variants={{
-                                hidden: {
-                                    opacity: 0,
-                                    x: 20,
-                                },
-
-                                visible: {
-                                    opacity: 1,
-                                    x: 0,
-                                },
-                            }}
-                            initial="hidden"
-                            whileInView="visible"
-                            transition={{ duration: 0.5, delay: 0.1 }}
-                            viewport={{ once: true }}
-                            className="animate_right md:w-1/2"
-                        >
+                        </Reveal>
+                        <Reveal dir="right" duration={0.5} className="animate_right w-full md:w-1/2">
                             <span className="font-medium uppercase text-black dark:text-white">
-                                <span className="mb-4 mr-4 inline-flex rounded-full bg-meta px-4.5 py-1 text-metatitle uppercase text-white ">
+                                <span className="mb-4 mr-4 inline-flex rounded-full bg-meta px-4.5 py-1 text-metatitle uppercase text-white">
                                     New
                                 </span>{' '}
                                 SaaS Boilerplate for Next.js
@@ -93,34 +60,14 @@ const About = () => {
                                     <p>consectetur adipiscing elit fermentum ultricies.</p>
                                 </div>
                             </div>
-                        </motion.div>
+                        </Reveal>
                     </div>
                 </div>
             </section>
-            {/* <!-- ===== About End ===== --> */}
-
-            {/* <!-- ===== About Two Start ===== --> */}
             <section>
                 <div className="mx-auto max-w-c-1235 overflow-hidden px-4 md:px-8 2xl:px-0">
                     <div className="flex items-center gap-8 lg:gap-32.5">
-                        <motion.div
-                            variants={{
-                                hidden: {
-                                    opacity: 0,
-                                    x: -20,
-                                },
-
-                                visible: {
-                                    opacity: 1,
-                                    x: 0,
-                                },
-                            }}
-                            initial="hidden"
-                            whileInView="visible"
-                            transition={{ duration: 1, delay: 0.1 }}
-                            viewport={{ once: true }}
-                            className="animate_left md:w-1/2"
-                        >
+                        <Reveal dir="left" className="animate_left md:w-1/2">
                             <h4 className="font-medium uppercase text-black dark:text-white">Launch Your SaaS Fast</h4>
                             <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
                                 Packed with All Essential {'   '}
@@ -143,23 +90,9 @@ const About = () => {
                                     </svg>
                                 </a>
                             </div>
-                        </motion.div>
-                        <motion.div
-                            variants={{
-                                hidden: {
-                                    opacity: 0,
-                                    x: 20,
-                                },
-
-                                visible: {
-                                    opacity: 1,
-                                    x: 0,
-                                },
-                            }}
-                            initial="hidden"
-                            whileInView="visible"
-                            transition={{ duration: 1, delay: 0.1 }}
-                            viewport={{ once: true }}
+                        </Reveal>
+                        <Reveal
+                            dir="right"
                             className="animate_right relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
                         >
                             <Image src="./images/about/about-light-02.svg" alt="About" className="dark:hidden" fill />
@@ -169,13 +102,10 @@ const About = () => {
                                 className="hidden dark:block"
                                 fill
                             />
-                        </motion.div>
+                        </Reveal>
                     </div>
                 </div>
             </section>
-            {/* <!-- ===== About Two End ===== --> */}
         </>
     );
-};
-
-export default About;
+}

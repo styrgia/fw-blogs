@@ -1,4 +1,4 @@
-import { FeatureTab } from '@/components/features/home/features-tab/featureTab';
+import { FeatureTab } from '~/components/features/home/features-tab/featureTab';
 
 const featuresTabData: FeatureTab[] = [
     {

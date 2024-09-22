@@ -1,7 +1,7 @@
-import { Testimonial } from '@/components/features/home/testimonial/testimonial';
+import { Testimonial } from '~/components/features/home/testimonial/testimonial';
 import Image from 'next/image';
 
-const SingleTestimonial = ({ review }: { review: Testimonial }) => {
+export function SingleTestimonial({ review }: { review: Testimonial }) {
     const { name, designation, image, content } = review;
     return (
         <div className="rounded-lg bg-white p-9 pt-7.5 shadow-solid-9 dark:border dark:border-strokedark dark:bg-blacksection dark:shadow-none">
@@ -16,6 +16,4 @@ const SingleTestimonial = ({ review }: { review: Testimonial }) => {
             <p>{content}</p>
         </div>
     );
-};
-
-export default SingleTestimonial;
+}

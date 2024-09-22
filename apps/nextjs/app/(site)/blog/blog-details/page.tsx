@@ -1,12 +1,11 @@
-import RelatedPost from '@/components/shared/blog/RelatedPost';
-import SharePost from '@/components/shared/blog/SharePost';
+import { RelatedPost } from '~/components/shared/blog/related-post';
+import { SharePost } from '~/components/shared/blog/share-post';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
     title: 'Blog Details Page - Solid SaaS Boilerplate',
     description: 'This is Blog details page for Solid Pro',
-    // other metadata
 };
 
 export default function SingleBlogPage() {

@@ -1,15 +1,15 @@
 'use client';
-import { useState } from 'react';
+import React, { ChangeEvent, FormEventHandler, useState } from 'react';
 
 export default function HeroForm() {
     const [email, setEmail] = useState('');
 
-    const handleSubmit = e => {
-        e.preventDefault();
+    const handleSubmit: FormEventHandler<HTMLFormElement> = event => {
+        event.preventDefault();
     };
 
-    const handleChange = e => {
-        setEmail(e.target.value);
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setEmail(event.target.value);
     };
 
     return (

@@ -1,4 +1,4 @@
-import { Menu } from '@/components/shared/headers/header/menu';
+import { Menu } from '~/components/shared/headers/header/menu';
 
 const menuData: Menu[] = [
     {

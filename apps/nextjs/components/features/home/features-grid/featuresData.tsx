@@ -1,4 +1,4 @@
-import { Feature } from '@/components/features/home/features-grid/feature';
+import { Feature } from '~/components/features/home/features-grid/feature';
 
 const featuresData: Feature[] = [
     {

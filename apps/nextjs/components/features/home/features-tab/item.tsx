@@ -1,8 +1,8 @@
 import React from 'react';
-import { FeatureTab } from '@/components/features/home/features-tab/featureTab';
+import { FeatureTab } from '~/components/features/home/features-tab/featureTab';
 import Image from 'next/image';
 
-export default function FeaturesTabItem({ featureTab }: { featureTab: FeatureTab }) {
+export function FeaturesTabItem({ featureTab }: { featureTab: FeatureTab }) {
     const { title, desc1, desc2, image, imageDark } = featureTab;
 
     return (

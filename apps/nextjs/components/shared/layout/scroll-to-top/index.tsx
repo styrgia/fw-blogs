@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-export default function ScrollToTop() {
+export function ScrollToTop() {
     const [isVisible, setIsVisible] = useState(false);
 
     // Top: 0 takes us all the way back to the top of the page
