@@ -1,12 +1,11 @@
 import { Metadata } from 'next';
-import { unstable_after as after } from 'next/server';
-
 import { RelatedPost } from '~/components/features/blog/post/related-post';
 import { BlogSearch } from '~/components/features/blog/post/search';
 import { BlogCategories } from '~/components/features/blog/post/categories';
 import { PostDetail } from '~/components/features/blog/post/detail';
 import { posts } from '~/components/shared/blog/posts';
 import { notFound } from 'next/navigation';
+import React from 'react';
 
 export const dynamic = 'error';
 
@@ -22,10 +21,7 @@ export async function generateMetadata({ params }: { params: { postId: string } 
     const post = posts.find(post => post.id === params.postId);
 
     if (!post) {
-        return {
-            title: 'Post not found',
-            description: 'Post not found',
-        };
+        return {};
     }
 
     return {
@@ -40,11 +36,6 @@ export default function PostPage({ params }: { params: { postId: string } }) {
     if (!post) {
         notFound();
     }
-
-    after(() => {
-        // Execute after the layout is rendered and sent to the user
-        console.log({ post });
-    });
 
     return (
         <section className="pb-20 pt-35 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50">
