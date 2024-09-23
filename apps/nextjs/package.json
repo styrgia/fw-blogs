@@ -11,13 +11,14 @@
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.0.1",
     "clsx": "^2.1.1",
     "framer-motion": "11.5.6",
     "nanoid": "^5.0.7",
-    "next": "14.2.13",
+    "next": "canary",
     "next-themes": "0.3.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "canary",
+    "react-dom": "canary",
     "react-hot-toast": "2.4.1",
     "sharp": "^0.33.5",
     "swiper": "11.1.14",

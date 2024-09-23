@@ -10,13 +10,19 @@ const nextConfig = {
 
     cleanDistDir: true,
 
-    swcMinify: true,
-
     generateBuildId: () => `${nanoid()}-${new Date().toISOString()}`,
 
     devIndicators: {
         buildActivity: true,
         buildActivityPosition: 'top-right',
+    },
+
+    experimental: {
+        ppr: 'incremental',
+        after: true,
+        // reactCompiler: {
+        //     compilationMode: 'annotation',
+        // },
     },
 
     logging: {
